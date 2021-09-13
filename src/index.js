@@ -1,23 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import CardList from "./components/CardList";
-import Quotes from "./components/Quotes";
 import Gambar from "./assets/images/photo.jpg";
-const quotes =
-"Disaat payung teduh ku dengar , disitu lah tugas-tugas terbabat abis";
+import bg1 from "./assets/images/gunung.jfif";
+import bg2 from "./assets/images/pantai.jfif";
+
+import Heeader from "./components/Header";
+const data = [
+    { user:"member", bg:bg1, judul:"Mountain", desc:"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...", image: Gambar, auth:"jolan", date:"Sept 13 2021"},
+    { user:"member", bg:bg2, judul:"Beach", desc:"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...", image: Gambar, auth:"jolan", date:"Sept 13 2021"},
+    ];
+ 
 ReactDOM.render(
 <React.StrictMode>
-<App />
-<CardList
-name="zolan"
-nim="21120118130048"
-kelompok="01"
-isNameBold
-image={Gambar}
+
+    <Heeader nama="Trip Adventure" a1="Hope" a2="You Enjoyed" />
+<CardList data={data}
 />
-<Quotes author="Orang" quotes={quotes} />
 </React.StrictMode>,
 document.getElementById("root")
 );
